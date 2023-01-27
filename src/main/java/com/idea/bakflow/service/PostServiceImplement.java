@@ -24,24 +24,24 @@ public class PostServiceImplement implements PostService{
 
     @Override
     public Optional<Post> findPost(Long id) {
-        return Optional.empty();
+        return postRepository.findById(id);
     }
 
     @Transactional(readOnly = false)
     @Override
     public Post createPost(Post post) {
-        return null;
+        return postRepository.save(post);
     }
 
     @Transactional(readOnly = false)
     @Override
     public Post editPost(Post post) {
-        return null;
+        return postRepository.save(post);
     }
 
     @Transactional(readOnly = false)
     @Override
-    public Post deletePost(Post post) {
-        return null;
+    public void deletePost(Long id) {
+        postRepository.deleteById(id);
     }
 }
