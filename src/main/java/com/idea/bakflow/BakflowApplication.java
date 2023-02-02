@@ -1,6 +1,5 @@
 package com.idea.bakflow;
 
-import com.idea.bakflow.model.Post;
 import com.idea.bakflow.repository.PostRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
