@@ -45,7 +45,7 @@ public class PostController {
         }
     }
 
-    @PutMapping("/posts/{id}")
+    @PutMapping("/posts/edit/{id}")
     public ResponseEntity<Post> editPost(@PathVariable("id") Long id, @RequestBody Post requestedPost){
         Optional<Post> optionalPost = postService.findPost(id);
 
@@ -62,7 +62,7 @@ public class PostController {
         }
     }
 
-    @DeleteMapping("/posts/{id}")
+    @DeleteMapping("/posts/delete/{id}")
     public ResponseEntity<HttpStatus> deletePost(@PathVariable("id") Long id){
         try{
             postService.deletePost(id);
